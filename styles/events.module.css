@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.title {
+    padding: 0 30px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    .title {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .container {
+        padding: 0 100px;
+    }
+}

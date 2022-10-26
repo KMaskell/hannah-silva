@@ -1,0 +1,57 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 0 30px;
+}
+
+.title {
+    display: none;
+}
+
+.bookSection {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.image {
+    border-radius: 15px;
+}
+.bookCopy {
+    padding: 0 15px;
+}
+
+.link {
+    color: #89bdd3;
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    .title {
+        display: block;
+        text-align: center;
+        padding: 0 30px;
+    }
+
+    .bookSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .titleCopy {
+        text-align: center;
+    }
+    .bookCopy {
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .container {
+        padding: 0 100px;
+    }
+}

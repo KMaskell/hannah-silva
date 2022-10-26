@@ -1,0 +1,85 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+    padding: 0 30px;
+}
+
+.title {
+    padding: 0 30px;
+}
+
+.image {
+    border-radius: 20px;
+}
+
+.radioSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.sectionCopy {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.link {
+    color: #89bdd3;
+    text-decoration: underline;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+    .title {
+        text-align: center;
+    }
+    .link {
+        padding: 10px 0;
+    }
+
+    .sectionCopy {
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .radioSection {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        padding: 20px 0;
+    }
+    .link {
+        padding: 5px 0;
+    }
+
+    .sectionCopy {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .container {
+        padding: 0 100px;
+    }
+
+    .sectionCopy {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .link {
+        padding: 5px 0;
+    }
+}

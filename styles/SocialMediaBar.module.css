@@ -1,0 +1,24 @@
+.component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0 20px 0;
+}
+
+.title {
+    margin: 0;
+    color: #4d4dff;
+}
+
+.icons {
+    display: flex;
+}
+
+.icon {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    outline: none;
+    font-size: 25px;
+}
