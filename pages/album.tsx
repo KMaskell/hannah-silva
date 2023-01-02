@@ -49,7 +49,7 @@ const Album = () => {
                     <tbody>
                         <tr>
                             <td className={styles.rowLeft}>
-                                Drums, beats and percussions
+                                {copy.drums_beats_percussions}
                             </td>
                             <td className={styles.rowRight}>
                                 {copy.julian_sartorius}
