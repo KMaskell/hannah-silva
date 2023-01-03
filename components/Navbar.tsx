@@ -1,16 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import styles from '../styles/Navbar.module.css';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import cx from 'classnames';
 
 export const Navbar = () => {
+    const [hamburgerActive, setHamburgerActive] = useState(false);
+
+    const handleHamburgerClick = () => {
+        if (hamburgerActive) {
+            setHamburgerActive(false);
+        } else setHamburgerActive(true);
+    };
     return (
         <nav className={styles.component}>
-            <button className={styles.hamburger} id="hamburger">
-                <FontAwesomeIcon icon={faBars} />
+            <button
+                className={cx(styles.hamburger, {
+                    [styles.show]: hamburgerActive,
+                })}
+                id="hamburger"
+                onClick={handleHamburgerClick}
+            >
+                {hamburgerActive ? (
+                    <FontAwesomeIcon icon={faXmark} />
+                ) : (
+                    <FontAwesomeIcon icon={faBars} />
+                )}
             </button>
-            <ul className={styles.navUl} id="navUl">
+            <ul
+                className={cx(styles.navUl, {
+                    [styles.show]: hamburgerActive,
+                })}
+                id="navUl"
+            >
                 <li className={styles.navBarItem}>
                     <Link href="/">Home</Link>
                 </li>
